@@ -1,0 +1,69 @@
+// Variables
+
+// Theme color variables
+$primary: #326dee !default;
+$secondary: #ebb0ff !default;
+$tertiary: #eeeeee !default;
+$success: #1ac888 !default;
+$warning: #f6c31c !default;
+$danger: #d32752 !default;
+
+
+// additional colors using map
+$colors: (
+    "primary": $primary,
+    "secondary": $secondary,
+    "success": $success,
+    "tertiary": $tertiary,
+    "danger": $danger,
+    "warning": $warning,
+    "blue": #1919e6,
+    "red": #e61919,
+    "yellow": #e6e619,
+    "green": #19e635,
+    "orange": #ffa600,
+    "purple": #9900ff,
+    "gray": #808080,
+    "black": black,
+    "white": white,
+) !default;
+
+
+// @debug map-get($colors, "white");
+// @debug map-has-key($colors, "purple");
+// @debug map-has-key($colors, "love");
+// @debug map-merge($colors, ("pink": #b79696ee));
+// @debug map-remove($colors, "pink");
+
+
+// Spacing
+$base-padding: 0.75rem !default;
+$base-margin: 0.75rem !default;
+
+// borders variable
+$base-border-thickness: 1px !default;
+$base-border-radius: 20px !default;
+
+// box-shadow variable
+$base-box-shadow: 1px 3px 10px rgba(114, 114, 114, 0.08) !default;
+
+
+// font-size variables
+$base-font-size: 1rem !default;
+$font-size-sm: $base-font-size * 0.75 !default;
+$font-size-md: $base-font-size * 1.5 !default;
+$font-size-lg: $base-font-size * 2 !default;
+$font-size-xl: $base-font-size * 3 !default;
+$font-size-xxl: $base-font-size * 4 !default;
+$font-size-vl: $base-font-size * 8 !default;
+
+
+// transiton 
+$transtion: all 600ms ease-in-out !default;
+
+//letter spacing
+$base-lspacing: 2px !default; 
+
+// b{
+//     font-weight: ;
+// }

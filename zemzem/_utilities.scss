@@ -1,0 +1,350 @@
+@use 'sass:math';
+
+$utilities: (
+
+    // padding section 
+
+    "padding":(
+        "prefix": 'p',
+        "value": (
+            "0": 0,
+            "1": $base-padding,
+            "2": $base-padding * 2,
+            "3": $base-padding * 4,
+            "4": $base-padding * 6,
+            "5": $base-padding * 8,
+        ),
+
+    ),
+    "padding-left":(
+        "prefix": 'pl',
+        "value": (
+            "0": 0,
+            "1": $base-padding,
+            "2": $base-padding * 2,
+            "3": $base-padding * 4,
+            "4": $base-padding * 6,
+            "5": $base-padding * 8,
+        ),
+
+    ),
+    "padding-right":(
+        "prefix": 'pr',
+        "value": (
+            "0": 0,
+            "1": $base-padding,
+            "2": $base-padding * 2,
+            "3": $base-padding * 4,
+            "4": $base-padding * 6,
+            "5": $base-padding * 8,
+        ),
+
+    ),
+    "padding-top":(
+        "prefix": 'pt',
+        "value": (
+            "0": 0,
+            "1": $base-padding,
+            "2": $base-padding * 2,
+            "3": $base-padding * 4,
+            "4": $base-padding * 6,
+            "5": $base-padding * 8,
+        ),
+
+    ),
+    "padding-bottom":(
+        "prefix": 'pb',
+        "value": (
+            "0": 0,
+            "1": $base-padding,
+            "2": $base-padding * 2,
+            "3": $base-padding * 4,
+            "4": $base-padding * 6,
+            "5": $base-padding * 8,
+        ),
+
+    ),
+
+    // Margin Section
+
+    "margin":(
+        "prefix": 'm',
+        "value": (
+            "0": 0,
+            "1": $base-margin,
+            "2": $base-margin * 2,
+            "3": $base-margin * 4,
+            "4": $base-margin * 6,
+            "5": $base-margin * 8,
+        ),
+
+    ),
+    "margin-left":(
+        "prefix": 'ml',
+        "value": (
+            "0": 0,
+            "1": $base-margin,
+            "2": $base-margin * 2,
+            "3": $base-margin * 4,
+            "4": $base-margin * 6,
+            "5": $base-margin * 8,
+        ),
+
+    ),
+    "margin-right":(
+        "prefix": 'mr',
+        "value": (
+            "0": 0,
+            "1": $base-margin,
+            "2": $base-margin * 2,
+            "3": $base-margin * 4,
+            "4": $base-margin * 6,
+            "5": $base-margin * 8,
+        ),
+
+    ),
+    "margin-top":(
+        "prefix": 'mt',
+        "value": (
+            "0": 0,
+            "1": $base-margin,
+            "2": $base-margin * 2,
+            "3": $base-margin * 4,
+            "4": $base-margin * 6,
+            "5": $base-margin * 8,
+        ),
+
+    ),
+    "margin-bottom":(
+        "prefix": 'mb',
+        "value": (
+            "0": 0,
+            "1": $base-margin,
+            "2": $base-margin * 2,
+            "3": $base-margin * 4,
+            "4": $base-margin * 6,
+            "5": $base-margin * 8,
+        ),
+
+    ),
+
+    // for flex direction
+
+    "flex-direction":(
+        "prefix": 'flex',
+        "value": (
+            "row": row,
+            "rowr": row-reverse,
+            "column": column,
+            "colr": column-reverse,
+        ),
+
+    ),
+
+    // letter spacing
+    "letter-spacing":(
+        "prefix": 'ls',
+        "value": (
+            "0": 0,
+            "1": $base-lspacing,
+            "2": $base-lspacing * 2,
+            "3": $base-lspacing * 4,
+            "4": $base-lspacing * 6,
+            "5": $base-lspacing * 8,
+        ),
+
+    ),
+    // letter casing
+    "text-transform":(
+        "prefix": 'tt',
+        "value": (
+            "default": none,
+            "l": lowercase,
+            "u": uppercase,
+            "c": capitalize,
+        ),
+
+    ),
+
+    // width and height 
+    "width":(
+        "prefix": 'w',
+        "value": (
+            "10": 10%,
+            "25": 25%,
+            "50": 50%,
+            "75": 75%,
+            "100": 100%,
+        ),
+
+    ),
+
+    "height":(
+        "prefix": 'h',
+        "value": (
+            "10": 10%,
+            "25": 25%,
+            "50": 50%,
+            "75": 75%,
+            "100": 100%,
+        ),
+
+    ),
+
+    //opacity
+    "opacity":(
+        "prefix": 'o',
+        "value": (
+            "10": 0.1,
+            "20": 0.2,
+            "30": 0.3,
+            "40": 0.4,
+            "50": 0.5,
+            "60": 0.6,
+            "70": 0.7,
+            "80": 0.8,
+            "90": 0.9,
+            "default": 1,
+           
+        ),
+
+    ),
+
+    // font size
+    "font-size":(
+        "prefix": 'fz',
+        "value": (
+            "xs": $base-font-size,
+            "sm": $font-size-sm,
+            "md": $font-size-md,
+            "lg": $font-size-lg,
+            "xl": $font-size-xl,
+            "xxl": $font-size-xxl, 
+            "vl": $font-size-vl, 
+        ),
+
+    ),
+
+    // text align
+    "text-align":(
+        "prefix": 'text',
+        "value": (
+            "center": center,
+            "justify": justify,
+            "start": start,
+            "end": end,
+            "left": left, 
+            "right": right, 
+        ),
+
+    ),
+    
+    // display
+    "display":(
+        "prefix": 'd',
+        "value": (
+            "none": none,
+            "flex": flex,
+            "block": block,
+            "inline": inline,
+            "i-block": inline-block,
+        ),
+
+    ),
+
+    // align items
+    "align-items":(
+        "prefix": 'align',
+        "value": (
+            "center": center,
+            "baseline": baseline,
+            "flexstart": flex-start,
+            "flexend": flex-end,
+        ),
+
+    ),
+
+    // justify content
+    "justify-content":(
+        "prefix": 'justify',
+        "value": (
+            "center": center,
+            "baseline": baseline,
+            "flexstart": flex-start,
+            "flexend": flex-end,
+            "between": space-between,
+            "around": space-around,
+            "evenly": space-evenly,
+        ),
+
+    ),
+
+    //font weight
+    "font-weight":(
+        "prefix": 'fw',
+        "value": (
+            "100": 100,
+            "200": 200,
+            "300": 300,
+            "400": 400,
+            "500": 500,
+            "600": 600,
+            "700": 700,
+            "800": 800,
+            "900": 900,
+            "bold": bold,
+            "bolder": bolder,
+            "lighter": lighter,
+            
+        ),
+
+    ),
+
+    // box-shadow
+    "box-shadow":(
+        "prefix": 'shadow',
+        "value": (
+            "default": none,
+            "1": $base-box-shadow,
+            "2": 1px 5px 15px rgba(0, 0, 0, 0.08),
+            "3": 1px 10px 20px rgba(0, 0, 0, 0.08),
+            "4": 1px 15px 25px rgba(0, 0, 0, 0.08),
+            "5": 1px 20px 30px rgba(0, 0, 0, 0.08),            
+        ),
+
+    ),
+
+    // border-radius
+    "border-radius":(
+        "prefix": 'rounded',
+        "value": (
+            "default": 0,
+            "1": $base-border-radius - 15,         
+            "2": $base-border-radius - 10,
+            "3": $base-border-radius - 5,
+            "4": $base-border-radius,
+        ),
+
+    ),
+
+) !default;
+
+@each $property, $map in $utilities{
+    $prefix: map-get($map, "prefix");
+    $value: map-get($map, "value");
+
+    @each $key, $val in $value{
+        @if(#{$key} == "default"){
+            .#{$prefix}{
+                #{$property}: $val;
+            }
+        }
+
+        @else{
+            .#{$prefix}-#{$key}{
+                #{$property}: $val;
+            }
+        }
+    }
+
+}

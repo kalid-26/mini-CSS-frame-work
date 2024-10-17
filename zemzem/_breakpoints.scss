@@ -1,0 +1,41 @@
+// mobile first approach breackpoints
+
+$breakpoint: (
+    "xs": 360px,
+    "sm": 480px,
+    "md": 768px,
+    "lg": 1024px,
+    "xl": 1200px,
+    "xxl": 1400px,
+);
+
+@mixin breakpoint($size, $type: min){
+    @if $type == min{
+        @media (min-width: map-get($breakpoint, $size)){
+            @content;
+        }
+    } @else if $type == max{
+        @media (max-width: #{map-get($breakpoint, $size) - 1px}){
+            @content;
+        }
+    }
+};
+
+@mixin breakpoint-range($min: null, $max: null){
+    @if $min != null and $max != null{
+        @media (min-width: map-get($breakpoint, $min)) and (max-width: #{map-get($breakpoint, $max) - 1px}){
+            @content;
+        }
+    } @else if $min != null{
+        @media (min-width: map-get($breakpoint, $min)){
+            @content;
+        }
+    } @else if $max != null{
+        @media (max-width: #{map-get($breakpoint, $max) - 1px}){
+            @content;
+        }
+    }
+};
+
+
+

@@ -1,0 +1,44 @@
+%nav-flex{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.navbar{
+    @extend %nav-flex;
+    padding: $base-padding $base-padding * 2;
+
+    .brand{
+        font-size: $font-size-lg;
+    }
+
+    ul{
+        display: flex;
+
+        li{
+            padding: 12px;
+        }
+    }
+
+    @include breakpoint("xs"){
+        ul{
+            display: none;
+        }
+    }
+    
+    @include breakpoint("lg"){
+        ul{
+            display: flex;
+        }
+    }
+
+}
+
+@each $key, $val in $colors{  
+    .navbar-#{$key}{ 
+        @extend .navbar;     
+        background-color: $val;
+    }
+}
+

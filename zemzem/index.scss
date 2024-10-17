@@ -1,0 +1,26 @@
+// The partial scss file container 
+
+
+//importing variables and function partials
+@import 'variables';
+
+// base 
+@import 'base';
+@import 'breakpoints';
+@import 'grid';
+@import 'typography';
+
+
+// colors
+@import 'colors';
+
+
+// components partials
+@import './components/card';
+@import './components/button';
+@import './components/nav';
+
+
+
+// utility partials
+@import 'utilities';

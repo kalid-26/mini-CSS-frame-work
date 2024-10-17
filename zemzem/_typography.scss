@@ -1,0 +1,24 @@
+@include breakpoint("xs"){
+    
+    h1{
+        font-size: $font-size-xl * 2;
+    }
+
+    p{
+        font-size: $font-size-sm;
+        letter-spacing: $base-lspacing * 1;
+    }
+
+
+}
+@include breakpoint("lg"){
+
+    h1{
+        font-size: $font-size-vl;
+    }
+
+    p{
+        font-size: $font-size-sm;
+        letter-spacing: $base-lspacing * 3;
+    }
+}
